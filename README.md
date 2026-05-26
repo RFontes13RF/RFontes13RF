@@ -16,7 +16,7 @@
 ![Backend](https://img.shields.io/badge/Backend%20Developer-0D1117?style=flat-square&logo=python&logoColor=4F9CF9)
 ![Open to Opportunities](https://img.shields.io/badge/Open%20to%20Opportunities-2DCB73?style=flat-square&logo=briefcase&logoColor=white)
 ![Brasil](https://img.shields.io/badge/Brasil-009C3B?style=flat-square&logo=googlemaps&logoColor=white)
-![Insper](https://img.shields.io/badge/Insper-Eng.%20Computação-E63946?style=flat-square&logo=graduation-cap&logoColor=white)
+![Insper](https://img.shields.io/badge/Insper-Ciência%20da%20Computação-E63946?style=flat-square&logo=graduation-cap&logoColor=white)
 
 <br/>
 
@@ -29,7 +29,7 @@
 
 ---
 
-## `$ whoami`
+## 👤 Quem eu sou
 
 <!-- EDITAR: ajuste os campos com suas informações atualizadas -->
 
@@ -37,22 +37,22 @@
 class RyanFontes:
     nome        = "Ryan Fontes"
     cargo       = "Backend Developer"
-    formacao    = "Insper — Engenharia da Computação 🎓"
+    formacao    = "Insper — Ciência da Computação 🎓"
     localizacao = "São Paulo, Brasil 🇧🇷"
 
-    tecnologias_favoritas = ["Python", "PostgreSQL", "FastAPI", "Docker"]
+    tecnologias_favoritas = ["Python", "PostgreSQL", "FastAPI"]
 
     interesses = [
         "APIs robustas e de alta performance",
         "Análise e visualização de dados",
         "Sistemas distribuídos e escaláveis",
-        "Open Source e comunidade",
+        "Desenvolvimento de softwares",
     ]
 
     objetivo_2026 = "🎯 Conquistar posição em empresa de nível global (Big Tech)"
 
     def fora_do_teclado(self) -> list:
-        return ["explorar datasets públicos", "dashboards", "café ☕"]
+        return ["explorar datasets públicos", "dashboards", "vídeo-game 🎮"]
 ```
 
 <br/>
@@ -66,7 +66,6 @@ class RyanFontes:
 **Linguagens**
 
 [![Python](https://skillicons.dev/icons?i=python)](https://python.org)
-[![Bash](https://skillicons.dev/icons?i=bash)](https://www.gnu.org/software/bash/)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
 
 <br/>
@@ -77,7 +76,6 @@ class RyanFontes:
 
 [![FastAPI](https://skillicons.dev/icons?i=fastapi)](https://fastapi.tiangolo.com)
 [![Django](https://skillicons.dev/icons?i=django)](https://www.djangoproject.com)
-![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
 
 <br/>
 
@@ -87,7 +85,6 @@ class RyanFontes:
 
 [![PostgreSQL](https://skillicons.dev/icons?i=postgres)](https://www.postgresql.org)
 [![MySQL](https://skillicons.dev/icons?i=mysql)](https://www.mysql.com)
-[![Redis](https://skillicons.dev/icons?i=redis)](https://redis.io)
 
 <br/>
 
@@ -98,7 +95,6 @@ class RyanFontes:
 [![Docker](https://skillicons.dev/icons?i=docker)](https://docker.com)
 [![Git](https://skillicons.dev/icons?i=git)](https://git-scm.com)
 [![GitHub](https://skillicons.dev/icons?i=github)](https://github.com/RFontes13RF)
-[![Linux](https://skillicons.dev/icons?i=linux)](https://linux.org)
 [![VSCode](https://skillicons.dev/icons?i=vscode)](https://code.visualstudio.com)
 
 <br/>
@@ -109,8 +105,6 @@ class RyanFontes:
 
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat-square&logo=plotly&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
 
 <br/>
 
@@ -208,6 +202,6 @@ alem_do_codigo:
 
 <br/><br/>
 
-![Made with Python](https://img.shields.io/badge/Feito%20com-Python%20%26%20☕-4F9CF9?style=flat-square&logo=python&logoColor=white)
+![Made with Python](https://img.shields.io/badge/Feito%20com-Python%20%26%20🎮-4F9CF9?style=flat-square&logo=python&logoColor=white)
 
 </div>
