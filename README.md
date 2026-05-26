@@ -116,16 +116,11 @@ class RyanFontes:
 
 <div align="center">
 
-<img height="175" src="https://github-readme-stats.vercel.app/api?username=RFontes13RF&show_icons=true&theme=github_dark_dimmed&include_all_commits=true&count_private=false&hide_border=true&bg_color=0D1117&title_color=4F9CF9&icon_color=4F9CF9&text_color=C9D1D9" />
-<img height="175" src="https://github-readme-stats.vercel.app/api/top-langs/?username=RFontes13RF&layout=compact&theme=github_dark_dimmed&hide_border=true&bg_color=0D1117&title_color=4F9CF9&text_color=C9D1D9&langs_count=6" />
-
-<br/><br/>
-
 <img src="https://streak-stats.demolab.com?user=RFontes13RF&theme=github-dark-blue&hide_border=true&background=0D1117&ring=4F9CF9&fire=4F9CF9&currStreakLabel=4F9CF9&sideLabels=C9D1D9&dates=8B949E" />
 
 <br/><br/>
 
-<img src="https://github-profile-trophy.vercel.app/?username=RFontes13RF&theme=algolia&column=6&margin-w=6&margin-h=6&no-bg=true&no-frame=true" />
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=RFontes13RF&bg_color=0D1117&color=4F9CF9&line=4F9CF9&point=FFFFFF&hide_border=true&area=true&area_color=4F9CF9" />
 
 </div>
 
