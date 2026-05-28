@@ -109,23 +109,6 @@ class RyanFontes:
 
 ---
 
-## 📊 Estatísticas GitHub
-
-<!-- EDITAR: troque &theme= para mudar o visual (opções: dark, radical, tokyonight, merko) -->
-
-<div align="center">
-
-<img src="https://streak-stats.demolab.com?user=RFontes13RF&theme=github-dark-blue&hide_border=true&background=0D1117&ring=4F9CF9&fire=4F9CF9&currStreakLabel=4F9CF9&sideLabels=C9D1D9&dates=8B949E" />
-
-<br/><br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=RFontes13RF&bg_color=0D1117&color=4F9CF9&line=4F9CF9&point=FFFFFF&hide_border=true&area=true&area_color=4F9CF9" />
-
-</div>
-
-<br/>
-
----
 
 ## 🔭 Atualmente
 
