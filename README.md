@@ -49,7 +49,7 @@ class RyanFontes:
         "Desenvolvimento de softwares",
     ]
 
-    objetivo_2026 = "🎯 Conquistar posição em empresa de nível global (Big Tech)"
+    objetivo = "🎯 Estagiar em uma empresa grande (Big Tech)"
 
     def fora_do_teclado(self) -> list:
         return ["explorar datasets públicos", "dashboards", "vídeo-game 🎮"]
@@ -66,7 +66,6 @@ class RyanFontes:
 **Linguagens**
 
 [![Python](https://skillicons.dev/icons?i=python)](https://python.org)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
 
 <br/>
 
@@ -131,29 +130,19 @@ class RyanFontes:
 ## 🔭 Atualmente
 
 ```yaml
-# EDITAR: mantenha esta seção atualizada com o que você está fazendo agora
+
 
 estudando:
-  - Arquitetura de microsserviços com Python
-  - SQL avançado — otimização de queries e índices
-  - Algoritmos e estruturas de dados (prep Big Tech)
-  - Fundamentos de sistemas distribuídos em escala
+  - Python avançado
+  - SQL básico 
 
 construindo:
   - Portfólio técnico sólido e consistente no GitHub
-  - Projetos de análise de dados com Python + Pandas
+  - Projeto de análise de dados com Python + Pandas + Django Rest
 
 metas_2026:
-  - ✅  Solidificar stack backend Python (FastAPI + PostgreSQL)
-  - 🔄  Contribuir ativamente com projetos open source
-  - 🎯  Conquistar posição em empresa de nível global
-  - 📊  Aprofundar em visualização e análise de dados
-  - 🏆  Resolver problemas consistentemente no LeetCode/HackerRank
-
-alem_do_codigo:
-  - Explorar datasets públicos e encontrar insights interessantes
-  - Criar dashboards que transformam dados em histórias
-  - Leituras sobre engenharia de sistemas em larga escala
+  - 🎯  Conquistar mais experiência no mercado.
+  - 📊  Aprofundar em visualização e análise de dados.
 ```
 
 <br/>
