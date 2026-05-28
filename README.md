@@ -171,10 +171,12 @@ metas_2026:
      Após a GitHub Action rodar pela primeira vez, descomente o <img> abaixo.
 -->
 
+<!-- SNAKE: descomente após rodar o GitHub Action "Generate Snake Animation"
 <div align="center">
   <img src="https://raw.githubusercontent.com/RFontes13RF/RFontes13RF/output/github-contribution-grid-snake-dark.svg"
        alt="GitHub contribution snake animation" />
 </div>
+-->
 
 <br/>
 
