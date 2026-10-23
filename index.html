@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ryan Fontes · Camisa 10 do Backend</title>
+<meta name="description" content="Portfólio de Ryan Fontes — Backend Developer (Python, FastAPI, Django, PostgreSQL). Ciência da Computação no Insper.">
+<meta property="og:title" content="Ryan Fontes · Camisa 10 do Backend">
+<meta property="og:description" content="Um portfólio que é um jogo de futebol. Entra em campo! ⚽">
+<meta name="theme-color" content="#060912">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ─── INTRO: túnel do vestiário ───────────────────────────────────── -->
+<div id="intro" aria-hidden="true">
+  <div class="intro-half top"></div>
+  <div class="intro-half bottom"></div>
+  <div class="intro-board">
+    <span class="px">AO VIVO</span>
+    <div class="intro-score"><b>RYAN FC</b><span>0 × 0</span><b>BUGS FC</b></div>
+    <span class="intro-msg">Os times estão entrando em campo…</span>
+  </div>
+</div>
+
+<canvas id="fx" aria-hidden="true"></canvas>
+<div id="cursor" aria-hidden="true"></div>
+<div id="gol" aria-hidden="true"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<!-- ─── PLACAR / NAVEGAÇÃO ──────────────────────────────────────────── -->
+<header class="board">
+  <a href="#inicio" class="brand"><span class="brand-badge">RF</span><span>RYAN FONTES <i>10</i></span></a>
+  <nav>
+    <a href="#ficha">Ficha</a>
+    <a href="#escalacao">Escalação</a>
+    <a href="#jogadas">Jogadas</a>
+    <a href="#temporada">Temporada</a>
+    <a href="#campanha">Campanha</a>
+    <a href="#penalti">Contato</a>
+  </nav>
+  <div class="board-right">
+    <span class="clock px" id="clock">1ºT 00'</span>
+    <button class="sound" id="sound" aria-label="Ligar som" title="Som da torcida">🔇</button>
+  </div>
+  <div class="progress"><span id="progressBall">⚽</span></div>
+</header>
+
+<main>
+
+<!-- ─── HERO: estádio ───────────────────────────────────────────────── -->
+<section id="inicio" class="hero">
+  <canvas id="stadium"></canvas>
+  <div class="hero-copy">
+    <span class="kicker px">⚽ Portfólio · Temporada 2026</span>
+    <h1>RYAN<br><span>FONTES</span></h1>
+    <p class="typer"><span id="typer"></span><span class="caret">▌</span></p>
+    <p class="hero-sub">Estudante de Ciência da Computação no <b>Insper</b>, construindo APIs, bancos de dados e análises com Python. São Paulo, Brasil.</p>
+    <div class="hero-cta">
+      <a href="#jogadas" class="btn btn-yellow">Ver jogadas ↓</a>
+      <a href="#penalti" class="btn btn-ghost">Bater um pênalti 🥅</a>
+    </div>
+  </div>
+  <div class="hero-hud">
+    <span class="hint" id="hint">👆 Clique no campo para chutar!</span>
+    <span class="tally px">⚽ <b id="goals">0</b> &nbsp; 🧤 <b id="saves">0</b></span>
+  </div>
+</section>
+
+<!-- ─── FICHA ───────────────────────────────────────────────────────── -->
+<section id="ficha" class="section">
+  <div class="sec-head reveal">
+    <span class="px label">01 · Ficha técnica</span>
+    <h2>O camisa 10</h2>
+  </div>
+  <div class="ficha">
+    <div class="card-wrap reveal" id="cardWrap" title="Clique para virar a carta">
+      <div class="fut" id="fut">
+        <div class="fut-face fut-front">
+          <div class="fut-top">
+            <span class="ovr">84</span>
+            <span class="pos">BCK</span>
+            <svg class="flag" viewBox="0 0 28 20" aria-label="Brasil"><rect width="28" height="20" rx="2" fill="#009C3B"/><path d="M14 2L26 10L14 18L2 10Z" fill="#FFDF00"/><circle cx="14" cy="10" r="4.6" fill="#002776"/></svg>
+            <span class="club">RF</span>
+          </div>
+          <canvas class="fut-sprite" id="cardSprite" width="160" height="230"></canvas>
+          <div class="fut-name">RYAN FONTES</div>
+          <div class="fut-stats">
+            <span><b>88</b>PYT</span><span><b>82</b>API</span>
+            <span><b>76</b>SQL</span><span><b>80</b>DAD</span>
+            <span><b>79</b>GIT</span><span><b>99</b>GAS</span>
+          </div>
+          <div class="shine"></div>
+        </div>
+        <div class="fut-face fut-back">
+          <span class="px">Relatório do olheiro</span>
+          <p>Backend com faro de gol: transforma problema bagunçado em API limpa e dado cru em decisão.</p>
+          <ul>
+            <li><b>Posição</b>Backend · Python</li>
+            <li><b>Base</b>Insper · Ciência da Computação</li>
+            <li><b>Pé bom</b>FastAPI · Django · PostgreSQL</li>
+            <li><b>Meta</b>Estágio em Big Tech 🎯</li>
+            <li><b>Folga</b>Dados, dashboards e games 🎮</li>
+          </ul>
+          <small>GAS = gás: vontade de aprender. Sem teto.</small>
+        </div>
+      </div>
+      <span class="card-tip px">clique para virar ↻</span>
+    </div>
+
+    <div class="scout reveal">
+      <p class="lead">Sou desenvolvedor backend em formação, focado em <b>Python</b>, <b>APIs de alta performance</b> e <b>dados</b>. Gosto de sistemas que aguentam o jogo inteiro sem cair: rápidos, organizados e bem testados.</p>
+      <div class="bars">
+        <div class="bar" style="--v:88%"><span>Python</span><i></i><b>88</b></div>
+        <div class="bar" style="--v:82%"><span>FastAPI / Django</span><i></i><b>82</b></div>
+        <div class="bar" style="--v:76%"><span>SQL / PostgreSQL</span><i></i><b>76</b></div>
+        <div class="bar" style="--v:80%"><span>Pandas / Dados</span><i></i><b>80</b></div>
+        <div class="bar" style="--v:70%"><span>Docker</span><i></i><b>70</b></div>
+        <div class="bar" style="--v:99%"><span>Vontade de aprender</span><i></i><b>99</b></div>
+      </div>
+      <p class="fine">* avaliação do olheiro (feita pelo próprio jogador 😅)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ESCALAÇÃO ───────────────────────────────────────────────────── -->
+<section id="escalacao" class="section">
+  <div class="sec-head reveal">
+    <span class="px label">02 · Escalação</span>
+    <h2>O time titular</h2>
+    <p>Meu stack em campo. Passe o mouse (ou toque) em cada jogador para ver a função dele.</p>
+  </div>
+  <div class="lineup-wrap reveal">
+    <div class="pitch" id="pitch">
+      <svg class="pitch-lines" viewBox="0 0 100 140" preserveAspectRatio="none" aria-hidden="true">
+        <g fill="none" stroke="rgba(255,255,255,.55)" stroke-width=".5">
+          <rect x="3" y="3" width="94" height="134"/>
+          <line x1="3" y1="70" x2="97" y2="70"/>
+          <circle cx="50" cy="70" r="11"/>
+          <rect x="24" y="3" width="52" height="20"/><rect x="38" y="3" width="24" height="7"/>
+          <rect x="24" y="117" width="52" height="20"/><rect x="38" y="130" width="24" height="7"/>
+        </g>
+        <rect x="42" y="0.5" width="16" height="2.5" fill="rgba(255,255,255,.8)"/>
+      </svg>
+      <svg class="play" id="play" viewBox="0 0 100 140" preserveAspectRatio="none" aria-hidden="true">
+        <path id="playPath" d=""/>
+      </svg>
+      <div class="pball" id="pball"></div>
+    </div>
+    <aside class="lineup-side">
+      <div class="formation">
+        <span class="px">Esquema</span>
+        <button class="btn btn-ghost" id="formationBtn">4-3-3</button>
+      </div>
+      <div class="role" id="role">
+        <span class="px">Jogador</span>
+        <h3 id="roleName">Python</h3>
+        <p id="roleText">Camisa 9 e capitão. Faz gol de tudo quanto é jeito: API, script, análise de dados.</p>
+      </div>
+      <p class="fine">As setas de giz desenham a jogada: o dado sai do banco, passa pelo backend e vira gol na API.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ─── JOGADAS (projetos) ──────────────────────────────────────────── -->
+<section id="jogadas" class="section">
+  <div class="sec-head reveal">
+    <span class="px label">03 · Melhores jogadas</span>
+    <h2>Projetos</h2>
+    <p>Puxados ao vivo do meu GitHub. Cada repositório é uma rodada.</p>
+  </div>
+  <div class="matches" id="matches"></div>
+</section>
+
+<!-- ─── TEMPORADA ───────────────────────────────────────────────────── -->
+<section id="temporada" class="section">
+  <div class="sec-head reveal">
+    <span class="px label">04 · Estatísticas</span>
+    <h2>Temporada no GitHub</h2>
+    <p>Cada quadrado dourado é um dia em que eu entrei em campo. O jogo é gerado todo dia por um script Python meu.</p>
+  </div>
+  <div class="stats reveal">
+    <div class="stat"><b data-count="total">–</b><span>contribuições no ano</span></div>
+    <div class="stat"><b data-count="active">–</b><span>dias em campo</span></div>
+    <div class="stat"><b data-count="longest">–</b><span>dias seguidos (recorde)</span></div>
+    <div class="stat"><b data-count="best">–</b><span>contribuições no melhor dia</span></div>
+  </div>
+  <div class="season reveal">
+    <img src="https://raw.githubusercontent.com/RFontes13RF/RFontes13RF/output/futebol.svg" alt="Partida animada sobre o gráfico de contribuições do GitHub" loading="lazy">
+  </div>
+</section>
+
+<!-- ─── CAMPANHA ────────────────────────────────────────────────────── -->
+<section id="campanha" class="section">
+  <div class="sec-head reveal">
+    <span class="px label">05 · Campanha</span>
+    <h2>Rumo à final</h2>
+  </div>
+  <ol class="campaign" id="campaign">
+    <li class="reveal"><span class="round px">Estreia</span><h3>Primeiro commit</h3><p>Fevereiro de 2026: criei meu GitHub e comecei a jogar em público.</p></li>
+    <li class="reveal"><span class="round px">Fase de grupos</span><h3>Insper · Ciência da Computação</h3><p>A base: algoritmos, estruturas de dados e muita prática. Em andamento.</p></li>
+    <li class="reveal"><span class="round px">Oitavas</span><h3>Programação Eficaz · Projeto 1</h3><p>Aplicação web com Python, HTML, CSS e JavaScript.</p></li>
+    <li class="reveal"><span class="round px">Quartas</span><h3>Projeto de dados</h3><p>Análise de dados com Python + Pandas servida por uma API em Django REST. Em construção 🏗️</p></li>
+    <li class="reveal"><span class="round px">Semifinal</span><h3>Python avançado & SQL</h3><p>Treino diário: performance, banco de dados e sistemas escaláveis.</p></li>
+    <li class="reveal final"><span class="round px">Final</span><h3>Estágio em Big Tech 🏆</h3><p>O próximo jogo. Se você tem uma vaga, eu tenho o gás.</p></li>
+  </ol>
+</section>
+
+<!-- ─── PÊNALTI / CONTATO ───────────────────────────────────────────── -->
+<section id="penalti" class="section">
+  <div class="sec-head reveal">
+    <span class="px label">06 · Contato</span>
+    <h2>Decisão por pênaltis</h2>
+    <p>Escolha um canto e bata. Ganhando ou perdendo, me chama pra conversar 😉</p>
+  </div>
+  <div class="shootout reveal">
+    <div class="so-score px"><span>VOCÊ <b id="soYou">0</b></span><span id="soRound">Cobrança 1/5</span><span><b id="soKeeper">0</b> GOLEIRO</span></div>
+    <div class="goal" id="goal">
+      <div class="net"></div>
+      <div class="zones" id="zones">
+        <button data-z="0" aria-label="Ângulo esquerdo"></button><button data-z="1" aria-label="Alto no meio"></button><button data-z="2" aria-label="Ângulo direito"></button>
+        <button data-z="3" aria-label="Rasteiro esquerdo"></button><button data-z="4" aria-label="Rasteiro no meio"></button><button data-z="5" aria-label="Rasteiro direito"></button>
+      </div>
+      <canvas id="keeper" width="96" height="138"></canvas>
+    </div>
+    <div class="spot"><div class="kball" id="kball"></div></div>
+    <p class="so-msg" id="soMsg">Escolha um canto do gol 👆</p>
+  </div>
+  <div class="contacts reveal">
+    <button class="contact" id="copyEmail" data-email="ryanfc@al.insper.edu.br">
+      <span class="ci">✉️</span><span><b>E-mail</b><small>ryanfc@al.insper.edu.br</small></span><span class="go">copiar</span>
+    </button>
+    <a class="contact" href="https://linkedin.com/in/ryan-fontes-78b616254" target="_blank" rel="noopener">
+      <span class="ci">💼</span><span><b>LinkedIn</b><small>Ryan Fontes</small></span><span class="go">↗</span>
+    </a>
+    <a class="contact" href="https://github.com/RFontes13RF" target="_blank" rel="noopener">
+      <span class="ci">🐙</span><span><b>GitHub</b><small>@RFontes13RF</small></span><span class="go">↗</span>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <span class="px">Fim de jogo</span>
+  <div class="fulltime"><b>RYAN FC</b><span>10 × 0</span><b>BUGS FC</b></div>
+  <p>Feito com Python, café e muito futebol · São Paulo, Brasil 🇧🇷</p>
+  <p class="egg">psst… tem segredos escondidos neste estádio. Tente digitar <kbd>gol</kbd>.</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
