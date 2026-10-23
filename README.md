@@ -20,6 +20,12 @@
 
 <br/>
 
+<!-- ─── PORTFÓLIO ─────────────────────────────────────────────────── -->
+
+[![Entrar no estádio](https://img.shields.io/badge/⚽%20ENTRAR%20NO%20ESTÁDIO-Ver%20meu%20portfólio%20interativo-FFDF00?style=for-the-badge&labelColor=009C3B)](https://rfontes13rf.github.io/RFontes13RF/)
+
+<br/>
+
 <!-- EDITAR: substitua RFontes13RF pelo seu username se mudar -->
 ![Visitor Count](https://komarev.com/ghpvc/?username=RFontes13RF&style=flat-square&color=4F9CF9&label=Visitas+ao+perfil)
 
