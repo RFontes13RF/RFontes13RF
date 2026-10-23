@@ -321,7 +321,7 @@ $$('.reveal').forEach(reveal);
   let fans = [], stars = [], visible = true, t = 0, last = 0;
   const ball = { x: 0, y: 0, vx: 0, vy: 0, r: 8, rot: 0 };
   let state = 'juggle', stateT = 0, kickPose = 0, restT = 0, celebrate = 0, golBoard = 0, bulge = 0;
-  const shot = { react: 0, err: 0, resolved: false };
+  const shot = { react: 0, resolved: false, willSave: false };
   let tifo = 0, tifoClicks = 0, tifoReady = false, kicked = false;
   let goals = store.get('goals', 0), saves = store.get('saves', 0);
   $('#goals').textContent = goals;
@@ -340,9 +340,9 @@ $$('.reveal').forEach(reveal);
     S = clamp(Math.round(H / (mobile ? 200 : 180)), 3, 6);
     player = { x: mobile ? W * 0.16 : W * 0.58, w: 16 * S, h: 23 * S };
     player.y = groundY - player.h;
-    const gw = Math.max(44, S * 13), gh = Math.round(player.h * 1.3);
+    const gw = Math.max(44, S * 13), gh = Math.round(player.h * 1.45);
     goal = { x: W - gw - (mobile ? 6 : Math.max(24, W * 0.04)), w: gw, h: gh, top: groundY - gh, bar: Math.max(4, S) };
-    const ks = Math.max(2, S - 1);
+    const ks = Math.max(2, S - 1.5);
     keeper = { s: ks, w: 16 * ks, h: 23 * ks, x: 0, y: 0, base: 0, target: 0 };
     keeper.x = goal.x - keeper.w * 0.55;
     keeper.base = keeper.y = keeper.target = groundY - keeper.h;
@@ -389,7 +389,8 @@ $$('.reveal').forEach(reveal);
     ball.vx = dx / T;
     ball.vy = dy / T - 0.5 * G * T;
     state = 'free'; stateT = 0; restT = 0; kickPose = 0.25;
-    shot.react = 0.24; shot.err = rand(-0.5, 0.5) * keeper.h * 0.55; shot.resolved = false;
+    // o goleiro só "lê" ~1 em cada 4 chutes; nos outros ele pula pro lado errado
+    shot.resolved = false; shot.react = 0.1; shot.willSave = Math.random() < 0.25;
     Sound.kick();
     if (!kicked) { kicked = true; $('#hint').classList.add('off'); }
   }
@@ -449,8 +450,8 @@ $$('.reveal').forEach(reveal);
 
       if (state === 'free') {
         // goleiro
-        const kx0 = keeper.x + keeper.s * 3, kx1 = keeper.x + keeper.w - keeper.s * 3;
-        if (!shot.resolved && ball.vx > 0 && ball.x + r > kx0 && ball.x - r < kx1 && ball.y + r > keeper.y && ball.y - r < keeper.y + keeper.h) saved();
+        const kx0 = keeper.x + keeper.s * 4, kx1 = keeper.x + keeper.w - keeper.s * 4;
+        if (!shot.resolved && ball.vx > 0 && ball.x + r > kx0 && ball.x - r < kx1 && ball.y + r > keeper.y + keeper.s * 2 && ball.y - r < keeper.y + keeper.h) saved();
         // travessão / gol / teto da rede
         const plane = goal.x + goal.bar;
         if (px + r <= plane && ball.x + r > plane && ball.y > goal.top - r) {
@@ -477,16 +478,19 @@ $$('.reveal').forEach(reveal);
       }
     }
 
-    // goleiro lê a jogada (com reflexo e um errinho humano)
+    // goleiro: ou voa na bola, ou se compromete com o lado errado
     shot.react -= dt;
     if (state === 'free' && !shot.resolved && ball.vx > 0 && ball.x < keeper.x) {
       if (shot.react <= 0) {
         const tt = (keeper.x - ball.x) / ball.vx;
         const py = ball.y + ball.vy * tt + 0.5 * G * tt * tt;
-        keeper.target = clamp(py + shot.err - keeper.h * 0.35, goal.top - keeper.h * 0.1, keeper.base);
+        const low = py + ball.r > keeper.base - keeper.s * 4; // bateria no goleiro parado
+        keeper.target = shot.willSave
+          ? clamp(py - keeper.h * 0.4, goal.top - keeper.h * 0.1, keeper.base)
+          : low ? goal.top - keeper.h * 0.05 : keeper.base;
       }
     } else if (state !== 'free' || stateT > 1.2) keeper.target = keeper.base;
-    const sp = 175 * (S / 4) * dt;
+    const sp = 700 * (S / 4) * dt;
     keeper.y += clamp(keeper.target - keeper.y, -sp, sp * 1.4);
   }
 
