@@ -29,6 +29,26 @@
 
 ---
 
+<!-- ─── COMMIT FUTEBOL CLUBE ─────────────────────────────────────────
+     Gerado diariamente por scripts/futebol.py via GitHub Actions
+     (.github/workflows/profile-animations.yml) e publicado na branch "output".
+-->
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/RFontes13RF/RFontes13RF/output/futebol.svg"
+     alt="Commit Futebol Clube: partida de futebol animada jogada sobre o meu gráfico de contribuições"
+     width="100%" />
+
+<sub>⚽ <b>Commit Futebol Clube</b> — meu gráfico de contribuições virou um campo de futebol.
+Cada quadrado dourado é um dia de código. Gerado todo dia por <a href="scripts/futebol.py">um script Python meu</a> + GitHub Actions.</sub>
+
+</div>
+
+<br/>
+
+---
+
 ## 👤 Quem eu sou
 
 <!-- EDITAR: ajuste os campos com suas informações atualizadas -->
@@ -142,21 +162,6 @@ metas_2026:
 [![Email](https://img.shields.io/badge/Email-ryanfc%40al.insper.edu.br-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ryanfc@al.insper.edu.br)
 [![GitHub](https://img.shields.io/badge/GitHub-@RFontes13RF-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RFontes13RF)
 
-</div>
-
-<br/>
-
----
-
-<!-- ─── SNAKE ANIMATION ─────────────────────────────────────────────
-     Para ativar: crie .github/workflows/snake.yml no seu repo de perfil.
-     Conteúdo do workflow: https://github.com/Platane/snk#readme
-     Após a GitHub Action rodar pela primeira vez, descomente o <img> abaixo.
--->
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/RFontes13RF/RFontes13RF/output/github-contribution-grid-snake-dark.svg"
-       alt="GitHub contribution snake animation" />
 </div>
 
 <br/>
