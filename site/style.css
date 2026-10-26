@@ -196,7 +196,7 @@ body.has-cursor #cursor { display: block; }
 .role p { margin: 0; color: #cfd8ea; }
 
 /* ─── Jogadas ─────────────────────────────────────────────────────── */
-.matches { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+.matches { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 420px)); justify-content: center; gap: 20px; }
 .match { position: relative; display: flex; flex-direction: column; gap: 14px; padding: 22px; border-radius: 16px; text-decoration: none; overflow: hidden;
   background: linear-gradient(160deg, var(--navy-2), var(--navy)); border: 1px solid var(--line); transition: transform .3s, border-color .3s, box-shadow .3s; }
 .match::before { content: ''; position: absolute; inset: 0; opacity: 0; transition: opacity .4s;
@@ -214,6 +214,8 @@ body.has-cursor #cursor { display: block; }
 .chip i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
 .match-foot { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 12px; }
 .match-foot b { color: var(--yellow); }
+.match-foot a { color: var(--yellow); font-weight: 700; text-decoration: none; }
+.match-foot a:hover { text-decoration: underline; }
 .match.wip { border-style: dashed; }
 .wipbar { height: 8px; border-radius: 6px; background: var(--navy-2); overflow: hidden; }
 .wipbar i { display: block; height: 100%; width: 45%; background: repeating-linear-gradient(45deg, var(--yellow) 0 8px, #c9a800 8px 16px); animation: stripes 1s linear infinite; background-size: 22.6px 100%; }

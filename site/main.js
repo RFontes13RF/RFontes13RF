@@ -834,48 +834,46 @@ $$('.reveal').forEach(reveal);
   }, { threshold: 0.3 }).observe(pitch);
 })();
 
-/* ═══ JOGADAS: projetos ao vivo do GitHub ════════════════════════════ */
+/* ═══ JOGADAS: projetos selecionados ═════════════════════════════════ */
 
 (function projects() {
-  // EDITAR: descrições em português para cada repositório (o GitHub não tem)
-  const DESCR = {
-    'projeto-1': 'Projeto da disciplina Programação Eficaz (Insper): aplicação web com backend em Python e front-end em HTML, CSS e JavaScript.',
-    APS2: 'Atividade prática supervisionada desenvolvida em JavaScript.',
-  };
-  const LANG = { Python: '#3572A5', JavaScript: '#f1e05a', HTML: '#e34c26', CSS: '#563d7c', TypeScript: '#3178c6', Java: '#b07219', 'Jupyter Notebook': '#DA5B0B', C: '#555555' };
-  const FALLBACK = [
-    { name: 'APS2', language: 'JavaScript', pushed_at: '2026-10-06T00:00:00Z', stargazers_count: 0, html_url: `https://github.com/${GITHUB_USER}/APS2`, topics: [] },
-    { name: 'projeto-1', language: 'Python', pushed_at: '2026-08-28T00:00:00Z', stargazers_count: 0, html_url: `https://github.com/${GITHUB_USER}/projeto-1`, topics: [] },
+  // EDITAR: lista fixa de projetos (trabalhos simples da faculdade ficam de fora de propósito).
+  // links é opcional (cada um vira um botão no rodapé do card). wip: true marca como em andamento.
+  const PROJECTS = [
+    {
+      name: 'Sprint · Origin Health',
+      descr: 'Dashboard web com os dados da Origin Health, empresa que analisa produtos voltados ao SUS. Projeto em grupo: fiquei com o backend, construindo a API em Django REST e o tratamento dos dados com Pandas.',
+      tags: ['Python', 'Django REST', 'Pandas'],
+      links: [],
+    },
+    {
+      name: 'Comércio agêntico',
+      descr: 'Você informa o produto e os critérios de busca, e uma IA encontra a melhor opção de compra comparando avaliação, recomendações, preço, frete e prazo de entrega. Projeto em grupo, em desenvolvimento.',
+      tags: ['JavaScript', 'React', 'Flask', 'Python', 'IA'],
+      links: [
+        { label: 'API', url: 'https://github.com/iajuss/agentic-commerce-api' },
+        { label: 'Web', url: 'https://github.com/iajuss/agentic-commerce-web' },
+      ],
+      wip: true,
+    },
   ];
-  const box = $('#matches');
-  const fmt = (iso) => new Date(iso).toLocaleDateString('pt-BR');
+  const LANG = { Python: '#3572A5', JavaScript: '#f1e05a', HTML: '#e34c26', CSS: '#563d7c', TypeScript: '#3178c6', Java: '#b07219' };
+  const chip = (t) => `<span class="chip">${LANG[t] ? `<i style="background:${LANG[t]}"></i>` : ''}${esc(t)}</span>`;
 
-  function render(repos) {
-    const list = repos.filter((r) => !r.fork && r.name.toLowerCase() !== GITHUB_USER.toLowerCase());
-    const cards = list.map((r, i) => `
-      <a class="match reveal" href="${esc(r.html_url)}" target="_blank" rel="noopener">
-        <div class="match-top"><span class="px">Rodada ${String(i + 1).padStart(2, '0')}</span><span class="px">Encerrado ✓</span></div>
-        <h3>${esc(r.name)}</h3>
-        <p>${esc(DESCR[r.name] || r.description || 'Mais um lance registrado no GitHub.')}</p>
-        <div class="chips">${r.language ? `<span class="chip"><i style="background:${LANG[r.language] || '#888'}"></i>${esc(r.language)}</span>` : ''}${(r.topics || []).slice(0, 4).map((t) => `<span class="chip">${esc(t)}</span>`).join('')}</div>
-        <div class="match-foot"><span>Último lance: <b>${fmt(r.pushed_at)}</b></span><span>★ ${r.stargazers_count} · ver ↗</span></div>
-      </a>`);
-    cards.push(`
-      <div class="match wip reveal">
-        <div class="match-top"><span class="px">Próxima rodada</span><span class="px live">● Ao vivo</span></div>
-        <h3>Projeto de dados</h3>
-        <p>Análise de dados com Python + Pandas, servida por uma API em Django REST. Em construção.</p>
-        <div class="chips"><span class="chip"><i style="background:#3572A5"></i>Python</span><span class="chip">Pandas</span><span class="chip">Django REST</span></div>
-        <div class="wipbar"><i></i></div>
-      </div>`);
-    box.innerHTML = cards.join('');
-    $$('.reveal', box).forEach(reveal);
-  }
-
-  fetch(`https://api.github.com/users/${GITHUB_USER}/repos?per_page=100&sort=pushed`)
-    .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
-    .then(render)
-    .catch(() => render(FALLBACK));
+  $('#matches').innerHTML = PROJECTS.map((p, i) => {
+    const status = p.wip ? '<span class="px live">● Ao vivo</span>' : '<span class="px">Encerrado ✓</span>';
+    const links = p.links.map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join(' · ');
+    return `
+      <div class="match${p.wip ? ' wip' : ''} reveal">
+        <div class="match-top"><span class="px">Rodada ${String(i + 1).padStart(2, '0')}</span>${status}</div>
+        <h3>${esc(p.name)}</h3>
+        <p>${esc(p.descr)}</p>
+        <div class="chips">${p.tags.map(chip).join('')}</div>
+        ${p.wip ? '<div class="wipbar"><i></i></div>' : ''}
+        ${links ? `<div class="match-foot"><span>Repositórios</span><span>${links}</span></div>` : ''}
+      </div>`;
+  }).join('');
+  $$('.reveal', $('#matches')).forEach(reveal);
 })();
 
 /* ═══ TEMPORADA: estatísticas de contribuição ════════════════════════ */
