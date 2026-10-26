@@ -839,17 +839,19 @@ $$('.reveal').forEach(reveal);
 (function projects() {
   // EDITAR: lista fixa de projetos (trabalhos simples da faculdade ficam de fora de propósito).
   // links é opcional (cada um vira um botão no rodapé do card). wip: true marca como em andamento.
+  // private: true mostra "Repositório privado 🔒" no rodapé, sem link.
   const PROJECTS = [
     {
       name: 'Sprint · Origin Health',
       descr: 'Dashboard web com os dados da Origin Health, empresa que analisa produtos voltados ao SUS. Projeto em grupo: fiquei com o backend, construindo a API em Django REST e o tratamento dos dados com Pandas.',
       tags: ['Python', 'Django REST', 'Pandas'],
       links: [],
+      private: true,
     },
     {
       name: 'Comércio agêntico',
       descr: 'Você informa o produto e os critérios de busca, e uma IA encontra a melhor opção de compra comparando avaliação, recomendações, preço, frete e prazo de entrega. Projeto em grupo, em desenvolvimento.',
-      tags: ['JavaScript', 'React', 'Flask', 'Python', 'IA'],
+      tags: ['TypeScript', 'React', 'Flask', 'Python', 'IA'],
       links: [
         { label: 'API', url: 'https://github.com/iajuss/agentic-commerce-api' },
         { label: 'Web', url: 'https://github.com/iajuss/agentic-commerce-web' },
@@ -871,6 +873,7 @@ $$('.reveal').forEach(reveal);
         <div class="chips">${p.tags.map(chip).join('')}</div>
         ${p.wip ? '<div class="wipbar"><i></i></div>' : ''}
         ${links ? `<div class="match-foot"><span>Repositórios</span><span>${links}</span></div>` : ''}
+        ${p.private ? '<div class="match-foot"><span>Repositório</span><span>Privado 🔒</span></div>' : ''}
       </div>`;
   }).join('');
   $$('.reveal', $('#matches')).forEach(reveal);
