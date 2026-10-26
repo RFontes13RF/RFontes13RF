@@ -9,18 +9,18 @@
 
 <!-- ─── HERO / TYPING ANIMATION ──────────────────────────────────── -->
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&duration=3000&pause=1200&color=4F9CF9&center=true&vCenter=true&width=620&lines=Ol%C3%A1%2C+eu+sou+Ryan+Fontes+%F0%9F%91%8B;Backend+Developer+%7C+Python;Ci%C3%AAncia+da+Computa%C3%A7%C3%A3o+%40+Insper;Meu+portf%C3%B3lio+%C3%A9+um+jogo+%E2%9A%BD+%E2%86%93)](https://rfontes13rf.github.io/RFontes13RF/)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&duration=3000&pause=1200&color=4F9CF9&center=true&vCenter=true&width=620&lines=Ol%C3%A1%2C+eu+sou+Ryan+Fontes+%F0%9F%91%8B;Backend+Developer+%7C+Python;Ci%C3%AAncia+da+Computa%C3%A7%C3%A3o+%40+Insper;Conhe%C3%A7a+meu+portf%C3%B3lio+%E2%86%93)](https://rfontes13rf.github.io/RFontes13RF/)
 
 <!-- ─── PORTFÓLIO (destaque principal) ───────────────────────────── -->
 
 <a href="https://rfontes13rf.github.io/RFontes13RF/">
-  <img src="assets/estadio-banner.svg" width="100%"
-       alt="Entrar no estádio: clique para abrir meu portfólio interativo" />
+  <img src="assets/portfolio-banner.svg" width="100%"
+       alt="Ver portfólio: clique para abrir meu site" />
 </a>
 
 ### 👉 [**rfontes13rf.github.io/RFontes13RF**](https://rfontes13rf.github.io/RFontes13RF/) 👈
 
-<sub>Ficha técnica, stack, projetos, minha temporada no GitHub e uma disputa de pênaltis. Tudo lá dentro.</sub>
+<sub>Sobre mim, stack, projetos e trajetória, tudo em um só lugar.</sub>
 
 <br/><br/>
 
@@ -38,25 +38,13 @@
 
 <br/>
 
-<!-- ─── COMMIT FUTEBOL CLUBE ─────────────────────────────────────────
-     Gerado diariamente por scripts/futebol.py via GitHub Actions
-     (.github/workflows/profile-animations.yml) e publicado na branch "output".
--->
+---
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/RFontes13RF/RFontes13RF/output/futebol.svg"
-     alt="Commit Futebol Clube: partida de futebol animada jogada sobre o meu gráfico de contribuições"
-     width="100%" />
-
-<sub>⚽ <b>Commit Futebol Clube</b>: meu gráfico de contribuições virou um campo de futebol.
-Gerado todo dia por <a href="scripts/futebol.py">um script Python meu</a> + GitHub Actions.</sub>
-
-<br/><br/>
-
 <!-- ─── CONTATO ───────────────────────────────────────────────────── -->
 
-[![Portfólio](https://img.shields.io/badge/⚽%20Portfólio-Entrar%20no%20estádio-FFDF00?style=for-the-badge&labelColor=009C3B)](https://rfontes13rf.github.io/RFontes13RF/)
+[![Portfólio](https://img.shields.io/badge/Portfólio-rfontes13rf.github.io-4F9CF9?style=for-the-badge&logo=googlechrome&logoColor=white)](https://rfontes13rf.github.io/RFontes13RF/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Ryan%20Fontes-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/ryan-fontes-78b616254)
 [![Email](https://img.shields.io/badge/Email-ryanfc%40al.insper.edu.br-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ryanfc@al.insper.edu.br)
 
