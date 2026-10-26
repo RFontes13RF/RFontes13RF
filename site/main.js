@@ -285,7 +285,7 @@ function golShow(word = 'GOOOOL!', sub = '') {
 
 (function typer() {
   const el = $('#typer');
-  const words = ['Backend Developer', 'Python · FastAPI · Django', 'APIs, dados & performance', 'Camisa 10 do backend ⚽'];
+  const words = ['Backend Developer', 'Python · FastAPI · Django', 'APIs, dados & IA', 'Camisa 10 do backend ⚽'];
   if (REDUCED) { el.textContent = words[0]; return; }
   let w = 0, i = 0, del = false;
   (function tick() {
@@ -750,21 +750,21 @@ $$('.reveal').forEach(reveal);
   const TECH = {
     python: { n: 'Python', i: 'python/python-original.svg', cap: true, r: 'Camisa 9 e capitão. Faz gol de tudo quanto é jeito: API, script, automação e análise de dados.' },
     fastapi: { n: 'FastAPI', i: 'fastapi/fastapi-original.svg', r: 'Ponta veloz. APIs assíncronas que chegam antes da marcação, com documentação automática.' },
-    github: { n: 'GitHub', i: 'github/github-original.svg', r: 'Ponta-esquerda. É onde as jogadas viram vitrine (e onde este portfólio mora).' },
+    javascript: { n: 'JavaScript', i: 'javascript/javascript-original.svg', r: 'Ponta-esquerda driblador: leva a jogada até a tela do usuário. Em treino (nível básico).' },
     django: { n: 'Django', i: 'django/django-plain.svg', r: 'Meia armador. Organiza o jogo com ORM, admin e Django REST Framework.' },
     pandas: { n: 'Pandas', i: 'pandas/pandas-original.svg', r: 'Volante que limpa, filtra e organiza tudo no meio-campo dos dataframes.' },
     numpy: { n: 'NumPy', i: 'numpy/numpy-original.svg', r: 'Meia de cálculo rápido: vetoriza a jogada e não perde tempo com laço.' },
-    postgres: { n: 'PostgreSQL', i: 'postgresql/postgresql-original.svg', r: 'Zagueiro clássico. Segura os dados com transações ACID e não deixa nada passar.' },
-    mysql: { n: 'MySQL', i: 'mysql/mysql-original.svg', r: 'Zagueiro de confiança, que joga em qualquer estádio.' },
+    mysql: { n: 'MySQL', i: 'mysql/mysql-original.svg', r: 'Zagueiro clássico. Segura os dados com transações e não deixa nada passar.' },
+    flask: { n: 'Flask', i: 'flask/flask-original.svg', r: 'Zagueiro leve que sai jogando: microframework que serve a API do meu projeto em React.' },
     docker: { n: 'Docker', i: 'docker/docker-original.svg', r: 'Lateral que carrega o time inteiro pra qualquer campo, do jeitinho que treinou.' },
-    vscode: { n: 'VS Code', i: 'vscode/vscode-original.svg', r: 'Lateral incansável, presente em absolutamente todo lance.' },
+    react: { n: 'React', i: 'react/react-original.svg', r: 'Lateral que apoia o ataque montando a interface. Estreando no projeto atual.' },
     git: { n: 'Git', i: 'git/git-original.svg', gk: true, r: 'Goleiro. Já salvou o time de muito commit errado com um bom revert.' },
   };
   const FORMS = {
-    '4-3-3': { git: [50, 90], vscode: [14, 70], postgres: [37, 75], mysql: [63, 75], docker: [86, 70], pandas: [25, 50], django: [50, 55], numpy: [75, 50], github: [18, 24], python: [50, 17], fastapi: [82, 24] },
-    '4-4-2': { git: [50, 90], vscode: [14, 70], postgres: [37, 75], mysql: [63, 75], docker: [86, 70], pandas: [14, 46], django: [38, 51], numpy: [62, 51], github: [86, 46], python: [38, 20], fastapi: [62, 20] },
+    '4-3-3': { git: [50, 90], react: [14, 70], mysql: [37, 75], flask: [63, 75], docker: [86, 70], pandas: [25, 50], django: [50, 55], numpy: [75, 50], javascript: [18, 24], python: [50, 17], fastapi: [82, 24] },
+    '4-4-2': { git: [50, 90], react: [14, 70], mysql: [37, 75], flask: [63, 75], docker: [86, 70], pandas: [14, 46], django: [38, 51], numpy: [62, 51], javascript: [86, 46], python: [38, 20], fastapi: [62, 20] },
   };
-  const PLAY = ['git', 'postgres', 'django', 'fastapi', 'python'];
+  const PLAY = ['git', 'mysql', 'django', 'fastapi', 'python'];
   const pitch = $('#pitch'), path = $('#playPath'), pball = $('#pball'), btn = $('#formationBtn');
   let form = '4-3-3', started = false;
   const tokens = {};

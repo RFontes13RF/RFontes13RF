@@ -1,5 +1,7 @@
 <!-- ══════════════════════════════════════════════════════════════════
      GITHUB PROFILE README — Ryan Fontes (@RFontes13RF)
+     O README é só a vitrine: as informações completas ficam no site
+     (pasta site/, publicado em https://rfontes13rf.github.io/RFontes13RF/).
      EDITAR: procure por comentários "EDITAR:" para customizações rápidas
      ══════════════════════════════════════════════════════════════════ -->
 
@@ -7,33 +9,34 @@
 
 <!-- ─── HERO / TYPING ANIMATION ──────────────────────────────────── -->
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&duration=3000&pause=1200&color=4F9CF9&center=true&vCenter=true&width=620&lines=Ol%C3%A1%2C+eu+sou+Ryan+Fontes+%F0%9F%91%8B;Backend+Developer+%7C+Python;Dados%2C+Performance+%26+Sistemas;Construindo+o+futuro%2C+linha+por+linha.)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&duration=3000&pause=1200&color=4F9CF9&center=true&vCenter=true&width=620&lines=Ol%C3%A1%2C+eu+sou+Ryan+Fontes+%F0%9F%91%8B;Backend+Developer+%7C+Python;Ci%C3%AAncia+da+Computa%C3%A7%C3%A3o+%40+Insper;Meu+portf%C3%B3lio+%C3%A9+um+jogo+%E2%9A%BD+%E2%86%93)](https://rfontes13rf.github.io/RFontes13RF/)
 
-<br/>
+<!-- ─── PORTFÓLIO (destaque principal) ───────────────────────────── -->
 
-<!-- ─── STATUS BADGES ─────────────────────────────────────────────── -->
+<a href="https://rfontes13rf.github.io/RFontes13RF/">
+  <img src="assets/estadio-banner.svg" width="100%"
+       alt="Entrar no estádio: clique para abrir meu portfólio interativo" />
+</a>
+
+### 👉 [**rfontes13rf.github.io/RFontes13RF**](https://rfontes13rf.github.io/RFontes13RF/) 👈
+
+<sub>Ficha técnica, stack, projetos, minha temporada no GitHub e uma disputa de pênaltis. Tudo lá dentro.</sub>
+
+<br/><br/>
+
+<!-- ─── RESUMO RÁPIDO (para quem só passa os olhos) ───────────────── -->
 
 ![Backend](https://img.shields.io/badge/Backend%20Developer-0D1117?style=flat-square&logo=python&logoColor=4F9CF9)
 ![Open to Opportunities](https://img.shields.io/badge/Open%20to%20Opportunities-2DCB73?style=flat-square&logo=briefcase&logoColor=white)
-![Brasil](https://img.shields.io/badge/Brasil-009C3B?style=flat-square&logo=googlemaps&logoColor=white)
 ![Insper](https://img.shields.io/badge/Insper-Ciência%20da%20Computação-E63946?style=flat-square&logo=graduation-cap&logoColor=white)
+![São Paulo](https://img.shields.io/badge/São%20Paulo-009C3B?style=flat-square&logo=googlemaps&logoColor=white)
 
-<br/>
-
-<!-- ─── PORTFÓLIO ─────────────────────────────────────────────────── -->
-
-[![Entrar no estádio](https://img.shields.io/badge/⚽%20ENTRAR%20NO%20ESTÁDIO-Ver%20meu%20portfólio%20interativo-FFDF00?style=for-the-badge&labelColor=009C3B)](https://rfontes13rf.github.io/RFontes13RF/)
-
-<br/>
-
-<!-- EDITAR: substitua RFontes13RF pelo seu username se mudar -->
-![Visitor Count](https://komarev.com/ghpvc/?username=RFontes13RF&style=flat-square&color=4F9CF9&label=Visitas+ao+perfil)
+<!-- EDITAR: ícones da stack — adicione/remova nomes separados por vírgula (lista em https://skillicons.dev) -->
+[![Stack](https://skillicons.dev/icons?i=python,fastapi,django,flask,mysql,js,react,docker,git)](https://rfontes13rf.github.io/RFontes13RF/#escalacao)
 
 </div>
 
 <br/>
-
----
 
 <!-- ─── COMMIT FUTEBOL CLUBE ─────────────────────────────────────────
      Gerado diariamente por scripts/futebol.py via GitHub Actions
@@ -46,140 +49,18 @@
      alt="Commit Futebol Clube: partida de futebol animada jogada sobre o meu gráfico de contribuições"
      width="100%" />
 
-<sub>⚽ <b>Commit Futebol Clube</b> — meu gráfico de contribuições virou um campo de futebol.
-Cada quadrado dourado é um dia de código. Gerado todo dia por <a href="scripts/futebol.py">um script Python meu</a> + GitHub Actions.</sub>
-
-</div>
-
-<br/>
-
----
-
-## 👤 Quem eu sou
-
-<!-- EDITAR: ajuste os campos com suas informações atualizadas -->
-
-```python
-class RyanFontes:
-    nome        = "Ryan Fontes"
-    cargo       = "Backend Developer"
-    formacao    = "Insper — Ciência da Computação 🎓"
-    localizacao = "São Paulo, Brasil 🇧🇷"
-
-    tecnologias_favoritas = ["Python", "PostgreSQL", "FastAPI"]
-
-    interesses = [
-        "APIs robustas e de alta performance",
-        "Análise e visualização de dados",
-        "Sistemas distribuídos e escaláveis",
-        "Desenvolvimento de softwares",
-    ]
-
-    objetivo = "🎯 Estagiar em uma empresa grande (Big Tech)"
-
-    def fora_do_teclado(self) -> list:
-        return ["explorar datasets públicos", "dashboards", "vídeo-game 🎮"]
-```
-
-<br/>
-
----
-
-## ⚙️ Stack Tecnológica
-
-<!-- ─── LINGUAGENS ─────────────────────────────────────────────────── -->
-
-**Linguagens**
-
-[![Python](https://skillicons.dev/icons?i=python)](https://python.org)
-
-<br/>
-
-<!-- ─── BACKEND & APIS ─────────────────────────────────────────────── -->
-
-**Backend & APIs**
-
-[![FastAPI](https://skillicons.dev/icons?i=fastapi)](https://fastapi.tiangolo.com)
-[![Django](https://skillicons.dev/icons?i=django)](https://www.djangoproject.com)
-
-<br/>
-
-<!-- ─── BANCO DE DADOS ─────────────────────────────────────────────── -->
-
-**Banco de Dados**
-
-[![PostgreSQL](https://skillicons.dev/icons?i=postgres)](https://www.postgresql.org)
-[![MySQL](https://skillicons.dev/icons?i=mysql)](https://www.mysql.com)
-
-<br/>
-
-<!-- ─── DEVOPS & FERRAMENTAS ───────────────────────────────────────── -->
-
-**DevOps & Ferramentas**
-
-[![Docker](https://skillicons.dev/icons?i=docker)](https://docker.com)
-[![Git](https://skillicons.dev/icons?i=git)](https://git-scm.com)
-[![GitHub](https://skillicons.dev/icons?i=github)](https://github.com/RFontes13RF)
-[![VSCode](https://skillicons.dev/icons?i=vscode)](https://code.visualstudio.com)
-
-<br/>
-
-<!-- ─── DADOS & ANÁLISE ─────────────────────────────────────────────── -->
-
-**Dados & Análise**
-
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
-
-<br/>
-
----
-
-
-## 🔭 Atualmente
-
-```yaml
-
-
-estudando:
-  - Python avançado
-  - SQL básico 
-
-construindo:
-  - Portfólio técnico sólido e consistente no GitHub
-  - Projeto de análise de dados com Python + Pandas + Django Rest
-
-metas_2026:
-  - 🎯  Conquistar mais experiência no mercado.
-  - 📊  Aprofundar em visualização e análise de dados.
-```
-
-<br/>
-
----
-
-## 📬 Vamos Conversar?
-
-<!-- EDITAR: substitua "seu-perfil-aqui" pelo slug real do seu LinkedIn -->
-
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Ryan%20Fontes-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/ryan-fontes-78b616254)
-[![Email](https://img.shields.io/badge/Email-ryanfc%40al.insper.edu.br-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ryanfc@al.insper.edu.br)
-[![GitHub](https://img.shields.io/badge/GitHub-@RFontes13RF-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RFontes13RF)
-
-</div>
-
-<br/>
-
----
-
-<div align="center">
-
-<sub><i>"First, solve the problem. Then, write the code."</i> — John Johnson</sub>
+<sub>⚽ <b>Commit Futebol Clube</b>: meu gráfico de contribuições virou um campo de futebol.
+Gerado todo dia por <a href="scripts/futebol.py">um script Python meu</a> + GitHub Actions.</sub>
 
 <br/><br/>
 
-![Made with Python](https://img.shields.io/badge/Feito%20com-Python%20%26%20🎮-4F9CF9?style=flat-square&logo=python&logoColor=white)
+<!-- ─── CONTATO ───────────────────────────────────────────────────── -->
+
+[![Portfólio](https://img.shields.io/badge/⚽%20Portfólio-Entrar%20no%20estádio-FFDF00?style=for-the-badge&labelColor=009C3B)](https://rfontes13rf.github.io/RFontes13RF/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Ryan%20Fontes-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/ryan-fontes-78b616254)
+[![Email](https://img.shields.io/badge/Email-ryanfc%40al.insper.edu.br-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ryanfc@al.insper.edu.br)
+
+<!-- EDITAR: substitua RFontes13RF pelo seu username se mudar -->
+![Visitor Count](https://komarev.com/ghpvc/?username=RFontes13RF&style=flat-square&color=4F9CF9&label=Visitas+ao+perfil)
 
 </div>
