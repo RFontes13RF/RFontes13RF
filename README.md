@@ -26,13 +26,29 @@
 
 <!-- ─── RESUMO RÁPIDO (para quem só passa os olhos) ───────────────── -->
 
-![Backend](https://img.shields.io/badge/Backend%20Developer-0D1117?style=flat-square&logo=python&logoColor=4F9CF9)
-![Open to Opportunities](https://img.shields.io/badge/Open%20to%20Opportunities-2DCB73?style=flat-square&logo=briefcase&logoColor=white)
-![Insper](https://img.shields.io/badge/Insper-Ciência%20da%20Computação-E63946?style=flat-square&logo=graduation-cap&logoColor=white)
-![São Paulo](https://img.shields.io/badge/São%20Paulo-009C3B?style=flat-square&logo=googlemaps&logoColor=white)
+<!-- EDITAR: cartões de resumo — troque emoji, título (<b>) e subtítulo (<sub>) de cada célula -->
+<table>
+  <tr>
+    <td align="center" width="25%">💻<br/><b>Backend Developer</b><br/><sub>Python · APIs · Dados</sub></td>
+    <td align="center" width="25%">🟢<br/><b>Aberto a oportunidades</b><br/><sub>Estágio</sub></td>
+    <td align="center" width="25%">🎓<br/><b>Insper</b><br/><sub>Ciência da Computação</sub></td>
+    <td align="center" width="25%">📍<br/><b>São Paulo</b><br/><sub>Brasil</sub></td>
+  </tr>
+</table>
 
-<!-- EDITAR: ícones da stack — adicione/remova nomes separados por vírgula (lista em https://skillicons.dev) -->
-[![Stack](https://skillicons.dev/icons?i=python,fastapi,django,flask,mysql,js,react,docker,git)](https://rfontes13rf.github.io/RFontes13RF/#escalacao)
+<br/>
+
+<!-- EDITAR: stack — cada ícone leva ao site oficial. Para adicionar, copie uma linha e troque
+     o link e o nome depois de "?i=" (nomes em https://skillicons.dev) -->
+<a href="https://www.python.org"><img src="https://skillicons.dev/icons?i=python" alt="Python" title="Python" /></a>
+<a href="https://fastapi.tiangolo.com"><img src="https://skillicons.dev/icons?i=fastapi" alt="FastAPI" title="FastAPI" /></a>
+<a href="https://www.djangoproject.com"><img src="https://skillicons.dev/icons?i=django" alt="Django" title="Django" /></a>
+<a href="https://flask.palletsprojects.com"><img src="https://skillicons.dev/icons?i=flask" alt="Flask" title="Flask" /></a>
+<a href="https://www.mysql.com"><img src="https://skillicons.dev/icons?i=mysql" alt="MySQL" title="MySQL" /></a>
+<a href="https://developer.mozilla.org/docs/Web/JavaScript"><img src="https://skillicons.dev/icons?i=js" alt="JavaScript" title="JavaScript" /></a>
+<a href="https://react.dev"><img src="https://skillicons.dev/icons?i=react" alt="React" title="React" /></a>
+<a href="https://www.docker.com"><img src="https://skillicons.dev/icons?i=docker" alt="Docker" title="Docker" /></a>
+<a href="https://git-scm.com"><img src="https://skillicons.dev/icons?i=git" alt="Git" title="Git" /></a>
 
 </div>
 
